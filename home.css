@@ -1,0 +1,230 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* .body-layout {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 10px;
+} */
+
+
+
+.sidenav {
+    height: 100vh;
+    /* Full-height: remove this if you want "auto" height */
+    /* width: 250px; Set the width of the sidebar */
+    position: sticky;
+    /* Fixed Sidebar (stay in place on scroll) */
+    /* display: block; I dont know why we use block */
+    /* z-index: 1; */
+    /* top: 0; */
+    /* Stay at the top */
+    left: 0;
+    overflow-y: auto;
+    padding-top: 20px;
+    /* grid-row: 1/4; */
+    gap: 10px;
+
+}
+
+.main {
+    /* margin-left: 160px; Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+#home {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.myself {
+    right: 20px;
+    max-width: 50rem;
+    max-height: 50rem;
+    width: auto;
+    height: auto;
+}
+
+.description {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#GD {
+    display: grid;
+    height: 200px;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(6, 1fr); */
+    column-gap: 0.5rem;
+}
+
+.huiHanPosterImage {
+    right: 20px;
+    max-width: 50rem;
+    max-height: 50rem;
+    width: auto;
+    height: auto;
+}
+
+/* Style for adding the behavior for show/hide with the active class */
+/* section {
+    display: none;
+    margin-top: 50px;
+} */
+
+section {
+    display: none;
+    margin-top: 50px;
+}
+
+section.active {
+    display: block;
+}
+
+/* .wrapper {
+    width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1%;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+a {
+    text-decoration: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.card {
+    /* position: relative; */
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100%;
+    width: 600px;
+    height: 200px;
+    border-radius: 0.2em;
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+    /* filter: drop-shadow(3px 3px 3px grey); */
+    margin: 0.5em;
+}
+
+.workShot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.2em;
+}
+
+.itemName {
+    font-weight: 400;
+    font-size: 2em;
+    color: rgb(77, 77, 77);
+}
+
+.itemPrice {
+    color: gray;
+    margin-bottom: 1em;
+}
+
+.itemDescription {
+    color: gray;
+    margin-bottom: 2em;
+    height: 28%;
+    /* overflow: scroll; */
+}
+
+/* .box {
+    border-radius: 5%;
+    border: 1px solid forestgreen;
+    width: 20rem;
+    height: 20rem;
+} */
+
+/* .box2{
+    margin-right: 10px;
+} */
+
+.HuiPoster {
+    display: block;
+    max-width: 1000px;
+    max-height: 950px;
+    width: auto;
+    height: auto;
+}
+
+/* .bd-sidebar {
+    position: sticky;
+    top: 0;
+    display: block;
+    height: calc(100vh - 6rem);
+} */
+
+@media screen and (orientation: landscape) {
+    #GD {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        grid-template-rows: 180px 1fr;
+        width: 400px;
+        /* height: fit-content;  */
+        height: 100%
+    }
+
+    /* .itemDescription {
+        height: 100%;
+        overflow: scroll;
+    } */
+
+}
+
+/* added after the sidebar from bootstrap */
+@media (min-width: 992px) {
+    .bd-layout {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Copied from Bootstrap 5 */
+/* @media (min-width: 992px) {
+    .bd-sidebar {
+        position: sticky;
+        top: 0;
+        display: block;
+        height: calc(100vh - 6rem);
+    }
+
+    .offcanvas-lg {
+        display: flex;
+    }
+}
+ */
